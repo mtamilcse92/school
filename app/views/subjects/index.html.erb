@@ -1,0 +1,22 @@
+<div class="card-panel">
+<div class="row">
+	<div class="col s6">
+	<h4 class="col l3 offset-l1">SUBJECTS</h4>
+	</div>
+	<div class="col l2 offset-l4">
+	<h4 class="left">New Subject</h4>
+	<a class="add-button left btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a>
+	</div>
+</div>
+</div>
+<div id="new-form" class="new-form">
+	<%= render 'form', subject: @subject %>
+</div>
+<% @subjects.each do |subject| %>
+ <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><h3><%= subject.name %></h3></div>
+      <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+  <% end %>
