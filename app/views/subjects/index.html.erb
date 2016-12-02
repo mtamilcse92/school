@@ -16,7 +16,34 @@
  <ul class="collapsible" data-collapsible="accordion">
     <li>
       <div class="collapsible-header"><h3><%= subject.name %></h3></div>
+      <div class="collapsible-body">
+	  <div><a class="add-button left btn-floating btn-large waves-effect waves-light red"><i class="material-icons">add</i></a></div><br>
+      <p>Lorem ipsum dolor sit amet.</p></div>
+    </li>
+  </ul>
+  <% end %>
+
+
+
+<!-- for alert box -->
+
+
+  <a class="waves-effect waves-light btn" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal">
+    <div class="modal-content">
+     <% @subjects.each do |subject| %>
+ <ul class="collapsible" data-collapsible="accordion">
+    <li>
+      <div class="collapsible-header"><h3><%= subject.name %></h3></div>
       <div class="collapsible-body"><p>Lorem ipsum dolor sit amet.</p></div>
     </li>
   </ul>
   <% end %>
+    </div>
+
+    <div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
